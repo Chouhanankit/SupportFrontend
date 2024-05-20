@@ -7,7 +7,7 @@ const getUsers = async (token) => {
             Authorization: `Bearer ${token}`,
         },
     };
-    const response = await axios.get(API_URL + "/users", option)
+    const response = await axios.get("https://supportbackend-vevi.onrender.com/users", option)
     return response.data
 }
 
@@ -17,7 +17,7 @@ const getTickets = async (token) => {
             Authorization: `Bearer ${token}`,
         },
     };
-    const response = await axios.get(API_URL + "/tickets", option)
+    const response = await axios.get("https://supportbackend-vevi.onrender.com/tickets", option)
     return response.data
 }
 
@@ -28,7 +28,7 @@ const getTicket = async (token, id) => {
             Authorization: `Bearer ${token}`
         }
     }
-    const response = await axios.get(API_URL + "/tickets" + '/' + id, option)
+    const response = await axios.get("https://supportbackend-vevi.onrender.com/tickets" + '/' + id, option)
     return response.data
 }
 
