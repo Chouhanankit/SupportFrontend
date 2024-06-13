@@ -7,7 +7,7 @@ const fetchTickets = async (token) => {
             Authorization: `Bearer ${token}`
         }
     }
-    const response = await axios.get(API_URL, option)
+    const response = await axios.get("https://supportdesknew.onrender.com/api/ticket", option)
     return response.data
 }
 
@@ -17,7 +17,7 @@ const fetchTicket = async (token, id) => {
             Authorization: `Bearer ${token}`
         }
     }
-    const response = await axios.get(API_URL + "/" + id, option)
+    const response = await axios.get("https://supportdesknew.onrender.com/api/ticket"+ id, option)
     return response.data
 }
 
@@ -27,7 +27,7 @@ const createTicket = async (token, formData) => {
             Authorization: `Bearer ${token}`
         }
     }
-    const response = await axios.post(API_URL, formData, option)
+    const response = await axios.post("https://supportdesknew.onrender.com/api/ticket", formData, option)
     return response.data
 
 }
